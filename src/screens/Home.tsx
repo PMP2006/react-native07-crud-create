@@ -13,7 +13,7 @@ export function Home({ navigation }: any) {
 
     useEffect(() => { //useEffect 
         axios.
-            get("http://127.0.0.1:8000/api/musicas")
+            get("http://127.0.0.1:8000/musicas")
             .then((res) => setMusicas(res.data))
             .catch((err) => console.error("Erro ao carregar músicas:", err))
     }, [])
@@ -27,7 +27,7 @@ export function Home({ navigation }: any) {
                     🎵 Lista de Músicas
                 </Text>
                 <Pressable onPress={navToRegister}>
-                    <Ionicons name="add-circle" size={30} color="#fff" />
+                    <Ionicons name="add-circle" size={30} color="#015022ff" />
                 </Pressable>
             </View>
             <FlatList

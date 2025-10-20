@@ -4,7 +4,7 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#3e3737ff"
+        backgroundColor: "#000000ff"
     },
     plus: {
         padding:30,
@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
         justifyContent: "space-between"
     },
  title: {
-        color: "#fff",
+        color: "#006426ff",
         fontSize: 25,
         marginBottom: 12
     },
@@ -24,12 +24,12 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
         padding: 12,
         marginBottom: 10,
-        borderBottomColor: "#fff",
+        borderBottomColor: "#028837ff",
         borderBottomWidth: 1
     },
     nome: {
         fontSize: 15,
-        color: "#fff"
+        color: "#ffffffff"
     },
     estilo: {
         fontStyle: "italic",

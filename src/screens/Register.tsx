@@ -9,6 +9,10 @@ export function Register({ navigation }: any) {
   const [compositor, setCompositor] = useState("");
   const [estilo, setEstilo] = useState("");
 
+      function navToHome() {
+        navigation.navigate("home");
+    }
+
   const salvar = async () => {
     try {
       const payload = {
@@ -18,7 +22,7 @@ export function Register({ navigation }: any) {
         estilo: estilo.trim()
       }
       const headers: any = { "Content-Type": "application/json" };
-      const response = await axios.post("http://127.0.0.1:8000/api/musicas", payload, { headers });
+      const response = await axios.post("http://127.0.0.1:8000/musicas", payload, { headers });
       console.log("Salvo!")
       navigation.navigate("home");
     } catch (error: any) {
@@ -29,6 +33,9 @@ export function Register({ navigation }: any) {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
+        <Pressable onPress={navToHome}>
+          <Text style={styles.voltar}> Voltar </Text>
+        </Pressable>
         <Text style={styles.title}>Cadastre um nova música em sua Playlist</Text>
       </View>
       <View style={styles.form}>
